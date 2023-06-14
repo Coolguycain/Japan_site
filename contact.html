@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="examen.css">
+    <link rel="stylesheet" href="css/examen.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type="module" src="Javascript/maps.js"></script>
     <title>Ontdek japan contact</title>
 </head>
 <body>
     <header>
-        <a href=""><img src="Assets/Flag-Japan.webp" alt="Flag"></a>
-        <ul class="navmenu">
-            <li><a href="index.html">Home</a></li>
-            <li class="submenu"><a href="eten.html">Eten</a>
-                <ul>
-                    <li class="submenuitem"><a href="eten.html#streetfood">Streetfood</a></li>
-                    <li class="submenuitem"><a href="eten.html#vegan">Vegan</a></li>
-                </ul>
-            </li>
-            <li><a href="natuur.html">Natuur</a></li>
-            <li><a href="cultuur.html">Cultuur</a></li>
-            <li><a class="current" href="contact.html">Contact</a></li>
-        </ul>
+        <a href="index.html"><img src="Assets/index/Flag-Japan.png" alt="Flag"></a>
+        <nav aria-label="Main-menu">
+            <ul class="navmenu">
+                <li><a href="index.html">Home</a></li>
+                <li class="submenu"><a href="eten.html">Eten</a>
+                    <ul>
+                        <li class="submenuitem"><a href="eten.html#streetfood">Streetfood</a></li>
+                        <li class="submenuitem"><a href="eten.html#vegan">Vegan</a></li>
+                    </ul>
+                </li>
+                <li><a class="current" href="natuur.html">Natuur</a></li>
+                <li><a href="cultuur.html">Cultuur</a></li>
+                <li><a class="current" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 <section class="contact_formulier">
 <h2> Neem contact met ons op!</h2>
@@ -34,13 +35,13 @@
       <input title="Vul hier uw naam in" type="text" id="naam" name="naam" placeholder="Uw naam..." required>
   
       <label for="email">Email:</label>
-      <input title="Vul hier uw Email adres in"type="text" id="email" name="email" placeholder="voorbeeld@gmail.com" required>
+      <input title="Vul hier uw Email adres in" type="text" id="email" name="email" placeholder="voorbeeld@gmail.com" required>
 
       <label for="telefoonnr">Telefoon nummer:</label>
       <input title="Vul hier uw telefoon nummer in" type=tel id="telefoonnr" name="telefoonnr" required size="10"  pattern="^[0-9]{10}" placeholder="06 123 456 78">
   
-      <label for="subject">Uw vraag:</label>
-      <textarea title="Wat is uw vraag voor ons?"id="vraag" name="vraag" placeholder="Wat is uw vraag?" style="height:200px"></textarea>
+      <label for="vraag">Uw vraag:</label>
+      <textarea title="Wat is uw vraag voor ons?" id="vraag" name="vraag" placeholder="Wat is uw vraag?" style="height:200px"></textarea>
   
       <input type="submit" value="Submit">
     </form>

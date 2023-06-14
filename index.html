@@ -2,27 +2,28 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="examen.css">
+    <link rel="stylesheet" href="css/examen.css">
     <script src="javascript/foto-slider.js" defer></script>
     <title>Ontdek japan</title>
 </head>
 <body>
     <header>
-        <a href=""><img src="Assets/index/Flag-Japan.webp" alt="Flag"></a>
-        <ul class="navmenu">
-            <li><a class="current" href="index.html">Home</a></li>
-            <li class="submenu"><a href="eten.html">Eten</a>
-                <ul>
-                    <li class="submenuitem"><a href="eten.html#streetfood">Streetfood</a></li>
-                    <li class="submenuitem"><a href="eten.html#vegan">Vegan</a></li>
-                </ul>
-            </li>
-            <li><a href="natuur.html">Natuur</a></li>
-            <li><a href="cultuur.html">Cultuur</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <a href="index.html"><img src="Assets/index/Flag-Japan.png" alt="Flag"></a>
+        <nav aria-label="Main-menu">
+            <ul class="navmenu">
+                <li><a class="current" href="index.html">Home</a></li>
+                <li class="submenu"><a href="eten.html">Eten</a>
+                    <ul>
+                        <li class="submenuitem"><a href="eten.html#streetfood">Streetfood</a></li>
+                        <li class="submenuitem"><a href="eten.html#vegan">Vegan</a></li>
+                    </ul>
+                </li>
+                <li><a href="natuur.html">Natuur</a></li>
+                <li><a href="cultuur.html">Cultuur</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <section class="carouselcontainer" aria-label="Foto's">
         <div class="carousel" data-carousel>
@@ -44,60 +45,69 @@
             </ul>
         </div>
     </section>
-    <div class="content">
-    <section class="contentcontainer">
+    <div class="artikelcontainer">
         <article>
-            <h2> Content 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo vero repudiandae beatae vel autem itaque. Ab, qui. Vel, 
-                nulla assumenda, adipisci doloribus voluptas neque nesciunt perspiciatis officia corporis quos sapiente praesentium quae quibusdam aut a ea, 
-                iure libero ullam ut accusantium architecto? Hic enim inventore a voluptatibus? Expedita sint nam minus itaque quae consectetur, id modi maxime! 
-                Id amet, quas dolorem ducimus debitis commodi asperiores tenetur suscipit! Sint, dolorum vel, commodi modi architecto minus tempora impedit fuga 
-                totam quisquam eveniet ex! Id tempore nisi et recusandae? Provident cupiditate autem inventore et in dolor doloremque dolores, excepturi blanditiis sint 
-                tempore doloribus.</p>
+            <h2>Betoverend Japan: het Land van de Rijzende Zon</h2>
+            <p> Welkom in de betoverende wereld van Japan, waar eeuwenoude tradities samenkomen met moderne innovatie.
+                Van de serene tempels in Kyoto tot de bruisende straten van Tokyo, dit land weet elke bezoeker te fascineren.
+                Verlies jezelf in de prachtige kersenbloesems tijdens de lente, geniet van de verfijnde smaken van sushi en sake, en laat je verwonderen door de precisie van de Japanse ambachtslieden.
+                Ontdek de mystiek van sumoworstelaars, geisha's en samurai, en ervaar de gastvrijheid van de Japanse cultuur. </p>
         </article>
         <article>
-            <h2> Content 1</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, consequatur vitae! Aperiam officia deleniti aliquid soluta sunt ut, rem aspernatur.</p>
+            <h2> Verken de Natuurlijke Pracht</h2>
+            <p> Laat je betoveren door serene zen-tuinen en bewonder de historische tempels doordrenkt van eeuwenoude tradities. 
+                Ontdek de verfijnde kunst van bonsai en geisha's, en proef de heerlijke smaken van sushi en sake. 
+                Ervaar de kleurrijke festivals en voel de hartverwarmende gastvrijheid van de Japanse bevolking. 
+                Duik in de harmonie tussen adembenemende natuur en rijke cultuur die dit land zo uniek maakt.
+                Een betoverend avontuur wacht op jou in Japan.</p>
         </article>
-    </section>
-    <hr>
-    <section class="mediacontainer">
-        <img src="Assets/index/kasteel.jpg" alt="kasteel">
+    </div>
+    <hr id="artikel_hr">
+    <div class="mediacontainer">
+        <iframe src="https://www.youtube.com/embed/WLIv7HnZ_fE?&mute=1"> </iframe>
+        <video controls>
+            <source src="Assets/index/Trailer of JAPAN.mp4" type="video/mp4">
+          </video>
         <img src="Assets/index/shibuya.jpg" alt="shibuya">
         <img src="Assets/index/tempel_park.jpg" alt="tempel_park">
         <img src="Assets/index/straat_nacht.jpg" alt="straat_nacht">
-        <img src="Assets/index/kasteel_park.jpg" alt="kasteel_park">
-    </section>
-    <hr>
-    <section class="postcontainer">
+    </div>
+    <hr id="media_hr">
+    <div class="postcontainer">
         <article>
             <a href="info">
                 <img src="Assets/index/restaurant.jpg" alt="restaurant">
                 <h2>Eten in japan</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat dolore quod culpa quibusdam officiis labore?</p>
+                <p>Ontdek de fascinerende wereld van de Japanse keuken en laat je verrassen door de exotische smaken van sushi, ramen en nog veel meer. <br>
+                    <br>
+                    Klik op de foto om meer te proeven.
+                </p>
             </a>
         </article>
         <article>
             <a href="info">
                 <img src="Assets/index/bos_pad.jpg" alt="bos_pad">
                 <h2>Ontdek de natuur</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat dolore quod culpa quibusdam officiis labore?</p>
+                <p>Ontdek de betoverende schoonheid van de Japanse natuur en laat je meevoeren door de weelderige tuinen, majestueuze bergen en schilderachtige kersenbloesems.<br>
+                   <br>
+                   Klik op de foto om meer te ontdekken.</p>
             </a>
         </article>
         <article>
             <a href="info">
                 <img src="Assets/index/theater.jpg" alt="theater">
                 <h2>Proef de cultuur</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat dolore quod culpa quibusdam officiis labore?</p>
+                <p>Verken de intrigerende diepten van de cultuur en dompel jezelf onder in eeuwenoude tradities, kunstvormen en de harmonie van theeceremonies.<br>
+                   <br>
+                   Klik op de foto om meer te leren.
+                </p>
             </a>
         </article>
-    </section>
     </div>
-    
-    <footer class="index_footer">
-    <hr>
-    <p>Author: Joshua de Boer <br>
-    <a href="mailto:voorbeeld@gmail.com">voorbeeld@gmail.com</a></p>
+    <hr id="index_footer_hr" class="hr">
+    <footer id="index_footer" class="footer">
+    <p>Author: - </p>
+    <p><a href="mailto:voorbeeld@gmail.com">voorbeeld@gmail.com</a></p>
     </footer>
 </body>
 
