@@ -1,0 +1,769 @@
+* { margin: 0; padding: 0; }
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap');
+body{
+    display: grid;
+    grid-template-rows: minmax(4rem, auto);
+    grid-template-columns: repeat(9, 1fr);
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(254, 255, 203);
+}
+
+a{
+    text-decoration: none ;
+    color: black;
+}
+
+header{
+    grid-area: 1 / 1 / 1 / 10;
+    display: flex;
+    width: 100%;
+    z-index: 3;
+    margin-bottom: 0.5rem;
+}
+
+header  img{ 
+    border: 1px solid black;
+    display: block;
+}
+
+header img:hover{
+    filter: invert(10%);
+}
+
+.logocontainer{
+    position: relative;
+    text-align: center;
+}
+.logotekst{
+    position: absolute;
+    top: 3%;
+    right: 10%;
+    color: black;
+    writing-mode: vertical-lr;
+    text-orientation:upright;
+}
+
+header nav{
+    width: 100%;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+header li{
+    font-family: 'Caveat', cursive;  
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    width: calc(100% / 5);
+}
+
+header li a{
+    display: block;
+    height: 100%;
+}
+
+header ul ul{
+    display: none;
+    position: absolute;   
+}
+
+.submenu:hover > ul {
+    display:inherit;
+}
+
+.submenu > a:after {
+    content: ' ▾';
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.submenu:hover > a:after {
+  transform: rotate(-180deg);
+}
+
+.current a, .current{
+    background: rgb(204, 31, 31);
+    color: white;
+}
+
+.submenuitem a{
+    width: 98%;
+    background-color:rgb(254, 255, 203);
+    color: black;
+    border: 0.5px solid black;
+}
+
+header li a:hover{ 
+    background: rgb(241, 64, 64);
+    color:white;
+}
+
+header li:not(:last-child, .submenuitem) {
+    border-right: 2px solid black;
+}
+
+/* einde header logo en menu */
+.carousel{
+    width: 100%;
+    position: relative;
+}
+
+.carousel ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 300ms opacity ease-in-out;
+}
+
+.slide img{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide[data-active]{
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0;
+}
+
+.carousel-button{
+    z-index: 2;
+    position:absolute;
+    background: none;  
+    border: none;
+    outline: none;
+    font-size: 3rem;
+    top:50%;
+    transform: translatey(-50%) ;
+    color: lightgrey;
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover,
+.carousel-button:focus{
+    color: white;
+    background-color:rgba(0, 0, 0, .2); ;
+}
+
+.carousel-button:focus{
+    outline: 1px solid black;
+}
+
+.carousel-button.prev{
+    left: 1rem;
+}
+
+.carousel-button.next{
+    right: 1rem;
+}
+
+/* einde carousel */
+
+hr{
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    height: 1px;
+    background-color: grey;
+}
+
+#artikel_hr{ 
+    grid-row: 8;
+} 
+
+#media_hr{ 
+    grid-row: 11;
+}
+
+.artikelcontainer{
+    display: flex;
+    gap: 0.5rem;
+    grid-row: 5 / 7;
+}
+
+.artikelcontainer article{
+    background-color: rgb(250, 237, 188);
+    border: 1px solid rgb(247, 229, 167);
+    border-radius: 5px;
+    padding: 1rem;
+    padding-top: 1rem;
+}
+
+.artikelcontainer p{
+    margin: 0;
+}
+
+.mediacontainer{
+    display: flex;
+    gap: 0.5rem;
+    grid-row: 9 / 10;
+}
+
+.mediacontainer img, 
+.mediacontainer iframe, 
+.mediacontainer video{
+    display: block;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center;
+}
+.postcontainer{
+    display: flex;   
+    justify-content: space-between;
+    grid-row: 12 / 13;
+ 
+}
+.postcontainer article{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    margin-top: 0;
+}
+
+.postcontainer article a {
+    display: flex;
+}
+
+.postcontainer p{
+    width: 100%; 
+    margin: 0.8rem;
+    margin-left: 0;
+}
+
+.postcontainer img {
+    display: block;
+    object-fit:cover;
+    object-position: center;
+    
+}
+
+
+#index_footer_hr{
+    grid-area: 13 / 1 / 13 / 10;
+}
+
+#index_footer{
+    grid-area: 14/ 1 / 14/ 10;
+}
+
+.footer{
+    background-color: rgb(250, 237, 188);
+    display: flex;
+}
+
+
+/* einde index pagina */
+.blokken_header{
+    grid-row: 3 / 4;
+    background-color: rgb(250, 237, 188);
+    border: 1px solid rgb(247, 229, 167);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.blokken_header h2{
+    margin-top: 0.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.blokken_container{
+    grid-row: 5 / 10;
+}
+
+.blokken_content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blokken_content article img{
+    display: block;
+    box-sizing: content-box;
+    object-fit: cover;
+}
+
+.blokken_content article,
+.kosten_tabel{
+    padding: 0.5rem;
+    background-color: rgb(247, 229, 167);
+}
+
+.blokken_content p, 
+.blokken_content img, 
+.blokken_content h3, 
+.blokken_content table{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 0.5rem;
+}
+
+.blokken_content table{
+    border-collapse: separate;
+    border-spacing: 0 0.7rem;
+}
+
+.tabel_gerecht{
+    text-align: left;
+}
+
+.tabel_icoon{
+    text-align: right;
+}
+
+.tabel_prijs{
+    text-align: center;
+}
+
+#content_footer_hr{
+    grid-area: 11 / 1 / 11 / 10;
+}
+
+#content_footer{
+    grid-area: 12 / 1 / 12 / 10;
+}
+
+/* einde content paginas */
+
+.contact_formulier{
+    grid-area: 2 / 3 / 7 / 9;
+}
+
+.header_eten h2{
+    text-align: center;
+}
+
+.formcontainer {
+    border-radius: 5px;
+    background-color: rgb(255, 228, 203);
+    padding: 0.8rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 1.2rem;
+    resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(241, 64, 64);
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(204, 31, 31);
+}
+
+#map {
+  width: 100%; 
+}
+
+@media (min-width:320px){
+    p{
+        font-size: 0.8rem;
+    }
+
+    h2{
+        font-size: 1.3rem;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header img{
+        width: 7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .logotekst{
+        font-size: 0.66rem;
+    }
+
+    header ul{ 
+        width: 100%;
+        height: 1.6rem;
+    }
+
+    header li{
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    .submenuitem{
+        font-size: 0.7rem;
+    }
+
+    .carouselcontainer{
+        grid-area: 2 / 1 / 5 / 10
+    }
+
+    .carousel{
+        height: 15rem;
+    }
+
+    .carousel-button{
+        font-size: 2rem;
+    }
+
+    .artikelcontainer{ 
+        flex-direction: column;
+        justify-content: center;
+        grid-column: 1 / 10;
+        margin-top: 0.5rem;
+    }
+
+    .mediacontainer{
+        flex-direction: column;
+        grid-column: 1 / 10;
+    }
+
+    .mediacontainer img, 
+    .mediacontainer iframe, 
+    .mediacontainer video{
+        width: 100%;
+    }
+
+    .postcontainer {
+        flex-direction: column;
+        grid-column: 1 / 10;
+        gap: 0.5rem;
+    }
+
+    .postcontainer article{
+        width: 100%; 
+    }
+
+    .postcontainer article a{
+        flex-direction: column
+    }
+
+    .postcontainer img{
+        width: 100%;
+    }
+
+    #artikel_hr, #media_hr{
+        grid-column: 1 / 10;
+    }
+
+    .footer{ 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer p{
+        margin: 0.2rem;
+    }
+
+    /* einde index pagina */
+    .blokken_header,  
+    .blokken_container{
+        grid-column: 1 / 10 ;
+    }   
+   
+    .blokken_content { 
+        flex-direction: column;
+    }
+
+    .blokken_content article{
+        margin-top: 0.8rem;
+    }
+
+    .blokken_content h3{
+        font-size: 1.1rem;
+    }
+
+    .blokken_content table{
+        font-size: 0.8rem;
+    }
+
+    /* einde content pagina */
+
+    .contact_formulier{
+        grid-area: 2 / 1 / 7 / 10;
+    }
+    #map{
+        height: 20rem;
+    }
+
+}
+
+@media (min-width:768px){
+    p{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 1.7rem;
+    }
+
+    header{    
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header img{
+        width: 7.5rem
+    }
+
+    .logotekst{
+        font-size: 0.73rem;
+    }
+
+    header ul{ 
+        width: 30rem;
+        height: 2.6rem;
+        margin:auto
+    }
+
+    header li{
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+    }
+
+    .submenuitem{
+        font-size: 1rem;
+    }
+
+    .artikelcontainer{ 
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 0rem;
+        grid-column: 1 / 10;
+    }
+
+    .artikelcontainer article{
+        width: calc(100% / 2 - 2.6rem);
+    }
+
+    .carouselcontainer{
+        grid-area: 2 / 1 / 5 / 10;
+        margin-bottom: 1rem ;
+    }
+    
+    .carousel{ height: 20rem;}
+
+    .mediacontainer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        grid-column: 1 / 10;
+    }
+
+    .mediacontainer > img, 
+    .mediacontainer > iframe, 
+    .mediacontainer > video{
+        width: calc(100% / 3 - 0.7rem);
+    }
+
+    .mediacontainer :nth-child(-n+2){
+        width: calc(100% / 2 - 0.5rem);
+    }
+
+    .postcontainer {
+        justify-content: space-between;
+    }
+
+    .postcontainer article {
+        width: 100%;
+    }
+
+    .postcontainer article:nth-child(even) a {
+        flex-direction: row-reverse;
+    }
+
+    .postcontainer article a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .postcontainer img {
+        width: 50%;
+        margin: auto;
+    }
+
+    .postcontainer p, .postcontainer h2{
+        margin: 0;
+    }
+
+    /* einde index pagina */
+
+    .blokken_container article:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+        
+    .blokken_container article:nth-child(even) img{
+        margin-right: 1rem;
+    }
+
+    .blokken_container article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .blokken_content img {
+        width: 49%;
+        margin: auto;
+    }
+
+    .blokken_content p{
+        font-size: 0.8rem;
+    }
+
+    .footer{ 
+        flex-direction: row;
+        font-size: 1.5rem;
+        justify-content: space-around;
+    }
+    .footer p{
+        margin-top: 0.2rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    #map {
+        height: 35rem;
+    }
+}
+@media (min-width: 1080px){
+
+    header li{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    
+    .carousel{
+        height: 25rem;
+    }
+
+    #artikel_hr, #media_hr{
+        grid-column: 2 / 9;
+    }
+
+    .artikelcontainer{
+        grid-column: 2 / 9;
+    }
+
+    .mediacontainer{
+        flex-wrap: nowrap;
+        grid-column: 2 / 9;
+    }
+    .mediacontainer img, 
+    .mediacontainer iframe, 
+    .mediacontainer video{
+        width: calc(100% / 5 - 0.7rem);
+        height: 6rem;
+        /* hier had ik liever de regel aspect ratio 16/9 gebruikt om de alles netjes in het goede formaat te houden maar dit staat niet in de leerstof. */
+    }
+    .mediacontainer :nth-child(-n+2){
+        width: calc(100% / 5 - 0.7rem);
+    }
+
+    .postcontainer {
+        flex-direction: row;
+        grid-column: 2 / 9;
+    }
+    .postcontainer article{
+        width: calc(100% / 3 - 0.4rem);
+        margin-top: 0; 
+    }
+
+    .postcontainer img{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1rem;
+
+    }
+
+    .postcontainer article a,
+    .postcontainer article:nth-child(even) a {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* einde index pagina */
+
+    .blokken_header {
+        grid-column: 2 / 9;
+    }
+
+    .blokken_container {
+        grid-column: 2 / 9;
+    }
+
+    .blokken_content{ 
+        flex-direction: row;
+    }
+
+    .blokken_content p{
+        font-size: 1rem;
+    }
+
+    .blokken_content table{
+        font-size: 1rem;
+    }
+
+    .blokken_content article,
+    .blokken_container article:nth-child(even) {
+        width: calc(100% / 2 - 1.5rem);
+        flex-direction: column;
+    }
+
+    .blokken_content article img{
+        width: 100%;
+        margin: 0;
+    }
+    .blokken_container article:nth-child(even) img{
+        margin: 0;
+    }
+
+    /* einde content paginas */
+
+    .contact_formulier{
+        grid-area: 2 / 2 / 7 / 9;
+    }
+  }
+
+  @media (min-width: 1440px){
+    body{
+        width: 80%;
+        margin: auto;
+    }
+  }
