@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/examen.css">
-    <title>Ontdek japanse cultuur</title>
+    <link rel="stylesheet" href="examen.css>
+    <title>Ontdek japanse Keuken</title>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="Assets/index/Flag-Japan.png" alt="Flag"></a>
-        <nav aria-label="Main-menu">
-            <ul class="navmenu">
+        <div class="logocontainer">
+            <a href="index.html"><img src="Assets/index/Flag-Japan.png" alt="Flag"></a>
+            <p class="logotekst">Japan</p>
+        </div>        <nav aria-label="Main-menu">
+            <ul >
                 <li><a href="index.html">Home</a></li>
                 <li class="submenu current"><a href="eten.html">Eten</a>
                     <ul>
-                        <li class="submenuitem"><a href="eten.html#streetfood">Streetfood</a></li>
-                        <li class="submenuitem"><a href="eten.html#vegan">Vegan</a></li>
+                        <li class="submenuitem"><a href="eten.html#sushi">Sushi</a></li>
+                        <li class="submenuitem"><a href="eten.html#ramen">Ramen</a></li>
+                        <li class="submenuitem"><a href="eten.html#takoyaki">Takoyaki</a></li>
+                        <li class="submenuitem"><a href="eten.html#mochi">Mochi</a></li>
+                        <li class="submenuitem"><a href="eten.html#rijstbal">Rijstballen</a></li>
+                        <li class="submenuitem"><a href="eten.html#prijs">Prijs</a></li>
                     </ul>
                 </li>
                 <li><a href="natuur.html">Natuur</a></li>
@@ -33,82 +39,147 @@
     <p>In japan hebben ze een woord <i>"Kuchisabishii (くちさびしい)"</i>, wat staat voor "eenzame mond" dit word gebruikt als je bijvoorbeeld eet uit verveling of gewoon omdat je wil eten zonder honger te hebben!</p>
 </section>
 <div class="blokken_container">
-<h2>bekende gerechten</h2>
-<div class="blokken_content">
-    <article>
-        <img src="Assets/Eten/sushi.jpg" alt="sushi">
-        <h3>Sushi: Een delicate dans van verse smaakexplosies. </h3>
-        <p>
-            Zijdezachte sushirijst, perfect gerold met de fijnste vis, knapperige groenten en een vleugje wasabi. <br>
-            Elke hap brengt een harmonie van smaken en texturen, terwijl de subtiele zoetheid van de sojasaus je smaakpapillen omarmt. <br>
-            Sushi, een culinair meesterwerk dat vakmanschap en precisie vereist, is niet alleen een gerecht, maar een kunstvorm op zich. <br>
-            Laat je betoveren door de eenvoud en verfijning van sushi en ontdek waarom het wereldwijd geliefd is.
-        </p>
-    </article>
-    <article>
-        <img src="Assets/Eten/ramen.jpg" alt="ramen">
-        <h3>Ramen: Een kom vol Japanse magie.</h3>
-        <p>
-            Een dampende kom gevuld met zijdezachte noedels, badend in een rijke, geurige bouillon. <br>
-            Elke slurp brengt een explosie van smaken, van de hartige umami tot de subtiele kruiden. <br>
-            Ramen, het ultieme comfortvoedsel uit Japan, biedt troost en voldoening in elke hap. Verken de verscheidenheid aan toppings, van zachtgekookt ei tot mals varkensvlees en knapperige groenten. <br>
-            Laat je onderdompelen in de betoverende wereld van ramen en ontdek waarom deze noedelsoup zo geliefd is over de hele wereld.
-        </p>
-    </article>
-</div>
-<h2 id="streetfood"> Streetfood</h2>
-<div class="blokken_content"> 
-    <article>
-        <img src="Assets/Eten/takoyaki.jpg" alt="takoyaki">
-        <h3>Takoyaki: De Betoverende Bites van  Octopusballetjes.</h3>
-        <p>
-            Knapperige bolletjes beslag, gevuld met malse stukjes octopus, bedekt met een glazuur van zoete saus en mayonaise. <br>
-            Elke hap onthult een perfecte combinatie van hartige en zoete smaken, met een verrassende textuur. <br>
-            Takoyaki, een populaire streetfoodlekkernij uit Japan, is een culinair avontuur op zich. <br>
-            Proef de authentieke smaak van de straten van Osaka en laat je meeslepen door de unieke smaak en gezellige sfeer die takoyaki met zich meebrengt. <br>
-            Geniet van deze heerlijke octopusballen en ontdek waarom ze zo geliefd zijn onder fijnproevers wereldwijd.
-        </p>
-    </article>
-    <article>
-        <img src="Assets/Eten/mochi.jpg" alt="mochi">
-        <h3>Mochi: De Zachte Delicatesse die je Zintuigen Betovert</h3>
-        <p>
-            Een zachte, kleverige rijstbal, subtiel gezoet en gevuld met een smaakvolle vulling. <br>
-            Mochi, een traditionele Japanse lekkernij, is een ware traktatie voor de smaakpapillen. <br>
-            Elke hap onthult een textuur die tegelijkertijd chewy en zijdezacht is, met een explosie van heerlijke smaken. <br>
-            Of je nu kiest voor klassieke vullingen zoals rode bonenpasta of avontuurlijkere smaken zoals groene thee of aardbei, mochi is een onweerstaanbare traktatie die je meeneemt op een culinaire reis door Japan. <br>
-            Laat je verleiden door de magie van mochi en ontdek waarom het zo geliefd is over de hele wereld..
-        </p>
+    <div class="blokken_content">
+        <article id="sushi">
+            <img src="Assets/Eten/sushi.jpg" alt="sushi">
+            <div>
+                <h3>Sushi: Een delicate dans van verse smaakexplosies. </h3>
+                <p>
+                    Zijdezachte sushirijst, perfect gerold met de fijnste vis, knapperige groenten en een vleugje wasabi. <br>
+                    Elke hap brengt een harmonie van smaken en texturen, terwijl de subtiele zoetheid van de sojasaus je smaakpapillen omarmt. <br>
+                    Sushi, een culinair meesterwerk dat vakmanschap en precisie vereist, is niet alleen een gerecht, maar een kunstvorm op zich. <br>
+                    Laat je betoveren door de eenvoud en verfijning van sushi en ontdek waarom het wereldwijd geliefd is.
+                </p>
+            </div>
+        </article>
+        <article id="ramen">
+            <img src="Assets/Eten/ramen.jpg" alt="ramen">
+            <div>
+                <h3>Ramen: Een kom vol Japanse magie.</h3>
+                <p>
+                    Een dampende kom gevuld met zijdezachte noedels, badend in een rijke, geurige bouillon. <br>
+                    Elke slurp brengt een explosie van smaken, van de hartige umami tot de subtiele kruiden. <br>
+                    Ramen, het ultieme comfortvoedsel uit Japan, biedt troost en voldoening in elke hap. Verken de verscheidenheid aan toppings, van zachtgekookt ei tot mals varkensvlees en knapperige groenten. <br>
+                    Laat je onderdompelen in de betoverende wereld van ramen en ontdek waarom deze noedelsoup zo geliefd is over de hele wereld.
+                </p>
+            </div>
+        </article>
+        <article id="takoyaki">
+            <img src="Assets/Eten/takoyaki.jpg" alt="takoyaki">
+            <div>
+                <h3>Takoyaki: De Betoverende Bites van  Octopusballetjes.</h3>
+                <p>
+                    Knapperige bolletjes beslag, gevuld met malse stukjes octopus, bedekt met een glazuur van zoete saus en mayonaise. <br>
+                    Elke hap onthult een perfecte combinatie van hartige en zoete smaken, met een verrassende textuur. <br>
+                    Takoyaki, een populaire streetfoodlekkernij uit Japan, is een culinair avontuur op zich. <br>
+                    Proef de authentieke smaak van de straten van Osaka en laat je meeslepen door de unieke smaak en gezellige sfeer die takoyaki met zich meebrengt. <br>
+                    Geniet van deze heerlijke octopusballen en ontdek waarom ze zo geliefd zijn onder fijnproevers wereldwijd.
+                </p>
+            </div>
+        </article>
+        <article id="mochi">
+            <img src="Assets/Eten/mochi.jpg" alt="mochi">
+            <div>
+                <h3>Mochi: De Zachte Delicatesse die je Zintuigen Betovert</h3>
+                <p>
+                    Een zachte, kleverige rijstbal, subtiel gezoet en gevuld met een smaakvolle vulling. <br>
+                    Mochi, een traditionele Japanse lekkernij, is een ware traktatie voor de smaakpapillen. <br>
+                    Elke hap onthult een textuur die tegelijkertijd chewy en zijdezacht is, met een explosie van heerlijke smaken. <br>
+                    Of je nu kiest voor klassieke vullingen zoals rode bonenpasta of avontuurlijkere smaken zoals groene thee of aardbei, mochi is een onweerstaanbare traktatie die je meeneemt op een culinaire reis door Japan. <br>
+                    Laat je verleiden door de magie van mochi en ontdek waarom het zo geliefd is over de hele wereld..
+                </p>
+            </div>
 
-    </article>
+        </article>
+        <article id="rijstbal">
+            <img src="Assets/Eten/rice-balls.jpg" alt="riceballs">
+            <div>
+                <h3>Rijstballen: De Draagbare Smaaksensatie uit Japan.</h3>
+                <p>
+                Proef de magie van plakkerige rijst, omhuld in een dun laagje nori. Rijstballen, ook bekend als onigiri, zijn perfecte hapjes voor onderweg. <br>
+                Kies uit diverse vullingen zoals tonijn, zalm, umeboshi en meer. <br>
+                De eenvoudige, hartige smaak en de handige verpakking maken ze ideaal voor een snelle, smakelijke maaltijd of een tussendoortje. <br>
+                Verwen je smaakpapillen met de heerlijke sensatie van rijstballen en ontdek waarom ze zo geliefd zijn in Japan en ver daarbuiten.
+                </p>
+            </div>
+        </article>
+        <article id="prijs">
+            <img src="Assets/Eten/yen_eten.jpg" alt="Yen">
+            <div>
+                <h3>Gemiddelde kosten van het eten in japan.</h2>  
+                <table > 
+                    <thead>
+                        <tr>
+                            <th class="tabel_gerecht" colspan="1">Gerecht</th>
+                            <th colspan="4">Prijs in Yen</th>
+                            <th colspan="4">Prijs in euro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tabel_gerecht">Sushi</td>
+                            <td class="tabel_icoon">&yen;</td>
+                            <td class="tabel_prijs">2000</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">10000</td>
+                            <td class="tabel_icoon">&euro;</td>
+                            <td class="tabel_prijs">13</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">60</td>
+                        </tr>
+                        <tr>
+                            <td class="tabel_gerecht">ramen</td>
+                            <td class="tabel_icoon">&yen;</td>
+                            <td class="tabel_prijs">800</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">1100</td>
+                            <td class="tabel_icoon">&euro;</td>
+                            <td class="tabel_prijs">5</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="tabel_gerecht">Takoyaki</td>
+                            <td class="tabel_icoon">&yen;</td>
+                            <td class="tabel_prijs">300</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">500</td>
+                            <td class="tabel_icoon">&euro;</td>
+                            <td class="tabel_prijs">2</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">4</td>
+                        </tr>
+                        <tr>
+                            <td class="tabel_gerecht">Mochi</td>
+                            <td class="tabel_icoon">&yen;</td>
+                            <td class="tabel_prijs">100</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">300</td>
+                            <td class="tabel_icoon">&euro;</td>
+                            <td class="tabel_prijs">1</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="tabel_gerecht">Rijstballen</td>
+                            <td class="tabel_icoon">&yen;</td>
+                            <td class="tabel_prijs">100</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">300</td>
+                            <td class="tabel_icoon">&euro;</td>
+                            <td class="tabel_prijs">1</td>
+                            <td class="tabel_prijs">-</td>
+                            <td class="tabel_prijs">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </div>
 </div>
-<h2 id="vegan">Vegan</h2>
-<div class="blokken_content">
-    <article>
-        <img src="Assets/Eten/rice-balls.jpg" alt="riceballs">
-        <h3>Rijstballen: De Draagbare Smaaksensatie uit Japan.</h3>
-        <p>
-            Proef de magie van plakkerige rijst, omhuld in een dun laagje nori. Rijstballen, ook bekend als onigiri, zijn perfecte hapjes voor onderweg. <br>
-            Kies uit diverse vullingen zoals tonijn, zalm, umeboshi en meer. <br>
-            De eenvoudige, hartige smaak en de handige verpakking maken ze ideaal voor een snelle, smakelijke maaltijd of een tussendoortje. <br>
-            Verwen je smaakpapillen met de heerlijke sensatie van rijstballen en ontdek waarom ze zo geliefd zijn in Japan en ver daarbuiten.
-        </p>
-    </article>
-    <article>
-        <img src="Assets/Eten/tsukemono.jpg" alt="tsukemono">
-        <h3>Tsukemono: De Gefermenteerde Kunstwerkjes uit Japan.</h3>
-        <p>
-            Ontdek de betoverende smaken van tsukemono, de traditionele Japanse inmaak. <br>
-            Geniet van de knapperige textuur en de complexe smaakprofielen van gefermenteerde groenten zoals komkommer, radijs, kool en meer. <br>
-            Elke hap biedt een explosie van zoet, zuur, zout en umami. <br>
-            Tsukemono is niet alleen een smaakvolle toevoeging aan elke maaltijd, maar ook een bron van probiotica en gezonde voordelen. <br>
-        </p>
-    </article>
-</div>
-</div>
-<hr id="content_footer_hr" class="footer_hr">
-<footer id="content_footer">
-<p>Author: Joshua de Boer <br>
-<a href="mailto:voorbeeld@gmail.com">voorbeeld@gmail.com</a></p>
+<hr id="content_footer_hr" class="hr">
+<footer id="content_footer" class="footer">
+    <p>auteur: coolguycain</p>
+    <p><a href="mailto:Voorbeeld@gmail.com">Voorbeeld@gmail.com</a></p>
 </footer>
 </body>

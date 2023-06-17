@@ -3,52 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/examen.css">
+    <link rel="stylesheet" href="examen.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type="module" src="Javascript/maps.js"></script>
-    <title>Ontdek japan contact</title>
+    <title>Ontdek japan Contact</title>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="Assets/index/Flag-Japan.png" alt="Flag"></a>
+        <div class="logocontainer">
+            <a href="index.html"><img src="Assets/index/Flag-Japan.png" alt="Flag"></a>
+            <p class="logotekst">Japan</p>
+        </div>       
         <nav aria-label="Main-menu">
-            <ul class="navmenu">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="submenu"><a href="eten.html">Eten</a>
                     <ul>
-                        <li class="submenuitem"><a href="eten.html#streetfood">Streetfood</a></li>
-                        <li class="submenuitem"><a href="eten.html#vegan">Vegan</a></li>
+                        <li class="submenuitem"><a href="eten.html#sushi">Sushi</a></li>
+                        <li class="submenuitem"><a href="eten.html#ramen">Ramen</a></li>
+                        <li class="submenuitem"><a href="eten.html#takoyaki">Takoyaki</a></li>
+                        <li class="submenuitem"><a href="eten.html#mochi">Mochi</a></li>
+                        <li class="submenuitem"><a href="eten.html#rijstbal">Rijstballen</a></li>
+                        <li class="submenuitem"><a href="eten.html#prijs">Prijs</a></li>
                     </ul>
                 </li>
-                <li><a class="current" href="natuur.html">Natuur</a></li>
+                <li><a href="natuur.html">Natuur</a></li>
                 <li><a href="cultuur.html">Cultuur</a></li>
                 <li><a class="current" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-<section class="contact_formulier">
-<h2> Neem contact met ons op!</h2>
-    <div class="formcontainer">
-        <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" >
-  
-      <label for="naam">Naam:</label>
-      <input title="Vul hier uw naam in" type="text" id="naam" name="naam" placeholder="Uw naam..." required>
-  
-      <label for="email">Email:</label>
-      <input title="Vul hier uw Email adres in" type="text" id="email" name="email" placeholder="voorbeeld@gmail.com" required>
+    <section class="contact_formulier">
+    <h2> Neem contact met ons op!</h2>
+        <div class="formcontainer">
+            <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" >
+            
+          <label for="naam">Naam:</label>
+          <input title="Vul hier uw naam in" type="text" id="naam" name="naam" placeholder="Uw naam..." required>
+            
+          <label for="email">Email:</label>
+          <input title="Vul hier uw Email adres in" type="text" id="email" name="email" placeholder="Voorbeeld@gmail.com" required>
 
-      <label for="telefoonnr">Telefoon nummer:</label>
-      <input title="Vul hier uw telefoon nummer in" type=tel id="telefoonnr" name="telefoonnr" required size="10"  pattern="^[0-9]{10}" placeholder="06 123 456 78">
-  
-      <label for="vraag">Uw vraag:</label>
-      <textarea title="Wat is uw vraag voor ons?" id="vraag" name="vraag" placeholder="Wat is uw vraag?" style="height:200px"></textarea>
-  
-      <input type="submit" value="Submit">
-    </form>
-    <div id="map"></div>
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyBmAmrnvYfT3ozTa0Adw5sxgd6IK0VICf0", v: "beta"});</script>
-    </div>
-</section>
+          <label for="telefoonnr">Telefoon nummer:</label>
+          <input title="Vul hier uw telefoon nummer in" type=tel id="telefoonnr" name="telefoonnr" required size="10"  pattern="^[0-9]{10}" placeholder="06 123 456 78">
+            
+          <label for="vraag">Uw vraag:</label>
+          <textarea title="Wat is uw vraag voor ons?" id="vraag" name="vraag" placeholder="Wat is uw vraag?" style="height:200px" required></textarea>
+            
+          <input type="submit" value="Verstuur">
+        </form>
+        <div id="map"></div>
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+            ({key: "AIzaSyBmAmrnvYfT3ozTa0Adw5sxgd6IK0VICf0", v: "beta"});</script>
+        </div>
+    </section>
+    <hr id="content_footer_hr" class="footer_hr">
+    <footer id="content_footer" class="footer">
+        <p>auteur: coolguycain</p>
+        <p><a href="mailto:Voorbeeld@gmail.com">Voorbeeld@gmail.com</a></p>
+    </footer>
 </body>
 </html>
